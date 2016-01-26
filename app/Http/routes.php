@@ -23,7 +23,6 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 /* DASHBOARD */
-//Route::get('/dashboard', 'DashboardController@index');
 Route::get('dashboard', [
     'as'  => 'dashboard',
     'middleware' => 'auth',
@@ -38,20 +37,21 @@ Route::get('user', [
 ]);
 
 /*CAMPAIN*/
-Route::get('campain', [
-    'as'  => 'campain',
-    'middleware' => 'auth',
-    'uses' => 'CampainController@index'
-]);
+
+Route::resource('campain', 'CampainController');
+//
+// Route::get('campain', [
+//     'as'  => 'campain',
+//     'middleware' => 'auth',
+//     'uses' => 'CampainController@index'
+// ]);
+//
+// Route::get('campain/optAdd', 'CampainController@optAdd');
 
 /*COMPANY*/
-Route::resource('company', 'CompanyController');
+Route::resource('company', 'CompanyController', ['before' => 'auth']);
 
-Route::get('campain/{id}', [
-    'as'  => 'campain',
-    'middleware' => 'auth',
-    'uses' => 'CampainController@index'
-]);
+//Route::get('company/optAdd', 'CompanyController@optAdd');
 
 /*TEST*/
 Route::get('test', [

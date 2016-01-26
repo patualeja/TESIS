@@ -162,19 +162,37 @@
 							<i class="fa fa-bomb icon-sidebar"></i>
 							Usuarios
 						</a>
+						<ul class="submenu">
+							<li><a href="{!! URL::route('company.index') !!}">Listar</a></li>
+							<li><a href="{!! URL::route('company.create') !!}">Agregar</a></li>
+						</ul>
 					</li>
 					<li>
-						<a href="{!! URL::route('campain') !!}">
+						<a href="#">
+							<i class="fa fa-flask icon-sidebar"></i>
+							Empresas
+						</a>
+						<ul class="submenu">
+							<li><a href="{!! URL::route('company.index') !!}">Listar</a></li>
+							<li><a href="{!! URL::route('company.create') !!}">Agregar</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">
 							<i class="fa fa-desktop icon-sidebar"></i>
 							Campañas
 						</a>
+						<ul class="submenu">
+							<li><a href="{!! URL::route('campain.index') !!}">Listar</a></li>
+							<li><a href="{!! URL::route('campain.create') !!}">Agregar</a></li>
+						</ul>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="{!! URL::route('test') !!}">
 							<i class="fa fa-flask icon-sidebar"></i>
 							Pruebas A/B
 						</a>
-					</li>
+					</li> -->
 					<li>
 						<a href="{!! URL::route('report') !!}">
 							<i class="fa fa-folder icon-sidebar"></i>
@@ -454,7 +472,7 @@
 		END PAGE
 		===========================================================
 		-->
-		
+
 		<!-- MAIN JAVASRCIPT (REQUIRED ALL PAGE)-->
 				{!! HTML::script('js/jquery.min.js') !!}
 				{!! HTML::script('js/bootstrap.min.js') !!}
