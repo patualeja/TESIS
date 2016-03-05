@@ -6,20 +6,11 @@
 	<h1></h1>
 	<div class="col-sm-12">
 		<div class="the-box">
-		<h4 class="small-title">AGREGAR</h4>
-			@if (count($errors) > 0)
-			    <div class="alert alert-danger">
-			        <ul>
-			            @foreach ($errors->all() as $error)
-			                <li>{{ $error }}</li>
-			            @endforeach
-			        </ul>
-			    </div>
-			@endif
+		<h4 class="small-title">CAMPAÑA</h4>
 			<form role="form" method="POST" action="/campain/">
 			  <div class="form-group">
 				<label>Inicio</label>
-				<input type="text" name="start_at" class="form-control datepicker" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
+				{{$campain->start_at}}
 			  </div>
 			  <div class="form-group">
 				<label>Fin</label>
