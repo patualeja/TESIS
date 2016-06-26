@@ -72,3 +72,24 @@ Route::get('report', [
     'middleware' => 'auth',
     'uses' => 'UserController@index'
 ]);
+
+Route::get('report_campains', [
+    'as'  => 'report_campains',
+    'middleware' => 'auth',
+    'uses' => 'ReportController@campains'
+]);
+Route::get('report_companies', [
+    'as'  => 'report_companies',
+    'middleware' => 'auth',
+    'uses' => 'ReportController@companies'
+]);
+Route::get('report_keywords', [
+    'as'  => 'report_keywords',
+    'middleware' => 'auth',
+    'uses' => 'ReportController@keywords'
+]);
+Route::get('report_global', [
+    'as'  => 'report_global',
+    'middleware' => 'auth',
+    'uses' => 'ReportController@global1'
+]);
